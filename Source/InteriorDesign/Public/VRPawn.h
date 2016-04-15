@@ -24,6 +24,20 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AldenCategory")
+	float customThing;
+
+	UFUNCTION(BlueprintCallable, Category = "Kilograph")
+	void setRightMotionController(UMotionControllerComponent *setThisController);
+
+	UFUNCTION(BlueprintCallable, Category = "Kilograph")
+	void setLeftMotionController(UMotionControllerComponent *setThisController);
+
 private:
 	TArray<IIButton *> buttons;
+
+	UMotionControllerComponent* LeftHandComponent;
+	UMotionControllerComponent* RightHandComponent;
 };
