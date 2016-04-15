@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "IButton.h"
 #include "GameFramework/Pawn.h"
 #include "VRPawn.generated.h"
 
@@ -22,4 +23,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+
+private:
+	TArray<IIButton *> buttons;
 };
