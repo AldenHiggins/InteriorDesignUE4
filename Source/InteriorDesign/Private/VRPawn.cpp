@@ -38,7 +38,6 @@ void AVRPawn::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
-	//bool PollControllerState(FVector& Position, FRotator& Orientation);
 	FVector position;
 	FRotator orientation;
 
@@ -53,18 +52,6 @@ void AVRPawn::Tick( float DeltaTime )
 void AVRPawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
 	Super::SetupPlayerInputComponent(InputComponent);
-}
-
-void AVRPawn::setRightMotionController(UMotionControllerComponent *setThisController)
-{
-	RightHandComponent = setThisController;
-	UE_LOG(LogTemp, Warning, TEXT("Set Right Controller"));
-}
-
-void AVRPawn::setLeftMotionController(UMotionControllerComponent *setThisController)
-{
-	LeftHandComponent = setThisController;
-	UE_LOG(LogTemp, Warning, TEXT("Set Left Controller"));
 }
 
 
