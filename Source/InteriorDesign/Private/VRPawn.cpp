@@ -38,14 +38,14 @@ void AVRPawn::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
-	FVector position;
-	FRotator orientation;
+	//FVector position;
+	//FRotator orientation;
 
-	for (auto MotionController : GEngine->MotionControllerDevices)
-	{
-		MotionController->GetControllerOrientationAndPosition(0, EControllerHand::Left, orientation, position);
-	}
-	UE_LOG(LogTemp, Warning, TEXT("Controller position, x: %f, y: %f, z: %f"), position.X, position.Y, position.Z);
+	//for (auto MotionController : GEngine->MotionControllerDevices)
+	//{
+	//	MotionController->GetControllerOrientationAndPosition(0, EControllerHand::Left, orientation, position);
+	//}
+	//UE_LOG(LogTemp, Warning, TEXT("Controller position, x: %f, y: %f, z: %f"), position.X, position.Y, position.Z);
 }
 
 // Called to bind functionality to input
